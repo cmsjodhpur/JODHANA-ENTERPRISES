@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JODHANA ENTERPRISES — Payments &amp; Distribution Platform</title>
+  <meta name="description" content="JODHANA ENTERPRISES जैसी सेवाएँ — रिचार्ज, बिल पे, पैसे ट्रांसफर, एजेंट नेटवर्क और रिपोर्टिंग" />
+  <style>
+    :root{--bg:#f5f7fb;--card:#ffffff;--muted:#6b7280;--primary:#0369a1;--accent:#f59e0b}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:var(--bg);color:#0f172a}
+    .wrap{max-width:1200px;margin:24px auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#0b7fb8);display:flex;align-items:center;justify-content:center;color:white;font-weight:900;font-size:20px}
+    nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(255,255,255,0.7));border-radius:12px}
+    .hero h1{margin:0 0 10px;font-size:28px}
+    .lead{color:var(--muted);margin-bottom:16px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-primary{background:var(--primary);color:white}
+    .btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.06)}
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .feature{background:#f8fafc;padding:10px 12px;border-radius:8px;font-weight:700;color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+    .service{padding:18px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfeff);border:1px solid #eef6fb}
+    .section{margin-top:20px}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:14px;text-align:center}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.services{grid-template-columns:1fr}.grid4{grid-template-columns:1fr}}
+    .quick-form input, .quick-form select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf3;margin-top:8px}
+    .app-badges{display:flex;gap:8px;align-items:center}
+    .badge{padding:8px 12px;border-radius:10px;border:1px solid #e6edf3;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">JE</div>
+        <div>
+          <div style="font-weight:900">JODHANA ENTERPRISES</div>
+          <div style="font-size:13px;color:var(--muted)">Payments • Distributors • Agents</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">सेवाएँ</a>
+        <a href="#partners">पार्टनर्स</a>
+        <a href="#pricing">प्लान</a>
+        <a href="#contact">संपर्क</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero card">
+        <div>
+          <h1>एक ही प्लेटफ़ॉर्म से रिचार्ज, बिल पे, पैसे ट्रांसफर और एजेंट नेटवर्क</h1>
+          <p class="lead">JODHANA ENTERPRISES जैसा अनुभव — तेज़, सुरक्षित और कमिशन‑फ्रेंडली। अपने ग्राहकों को बेहतर सर्विस दें और कॉमिशन कमाएँ।</p>
+
+          <div class="features">
+            <div class="feature">तुरंत KYC</div>
+            <div class="feature">रियल‑टाइम रिपोर्ट</div>
+            <div class="feature">API इंटीग्रेशन</div>
+            <div class="feature">24/7 सपोर्ट</div>
+          </div>
+
+          <div style="margin-top:16px" class="cta">
+            <a class="btn btn-primary" href="#signup">रजिस्टर करें</a>
+            <a class="btn btn-outline" href="#pricing">प्लान देखें</a>
+          </div>
+
+          <div class="section">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="app-badges">
+                <div class="badge">Google Play</div>
+                <div class="badge">App Store</div>
+              </div>
+              <div style="color:var(--muted);font-size:14px">(मोबाइल ऐप से भी सभी सुविधाएँ)</div>
+            </div>
+          </div>
+        </div>
+
+        <aside style="min-width:320px" class="card">
+          <h3 style="margin-top:0">त्वरित क्विक‑ट्रांसफर</h3>
+          <form class="quick-form" id="quickTx">
+            <label>मोबाइल / UPI नंबर</label>
+            <input id="to" placeholder="10-digit mobile या UPI ID" />
+            <label>राशि (₹)</label>
+            <input id="amount" type="number" placeholder="₹100" />
+            <label>सेवा</label>
+            <select id="svc"><option>पैसे भेजें</option><option>रिचार्ज</option><option>बिल पे</option></select>
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+              <button onclick="return quickSend(event)" class="btn btn-primary">भेजें</button>
+              <div style="font-size:13px;color:var(--muted)">सुरक्षित और तेज़</div>
+            </div>
+            <div id="qmsg" style="margin-top:10px;color:green;display:none">सफलतापूर्वक भेजा गया (डेमो)</div>
+          </form>
+        </aside>
+      </section>
+
+      <section id="services" class="section">
+        <h2>हमारी सेवाएँ</h2>
+        <div class="services">
+          <div class="service">
+            <h4>रिचार्ज &amp; DTH</h4>
+            <p style="color:var(--muted)">मोबाइल रिचार्ज, DTH रिचार्ज, और वैलेट रीकैप्चर।</p>
+          </div>
+          <div class="service">
+            <h4>बिल पेमेंट</h4>
+            <p style="color:var(--muted)">इलेक्ट्रिसिटी, पानी, गैस और अन्य बिल।</p>
+          </div>
+          <div class="service">
+            <h4>पैसे ट्रांसफर</h4>
+            <p style="color:var(--muted)">UPI, IMPS और NEFT समर्थन।</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="partners" class="section">
+        <h2>पार्टनर्स</h2>
+        <div class="grid4" style="margin-top:12px">
+          <div class="card" style="text-align:center;padding:20px">बैंक A</div>
+          <div class="card" style="text-align:center;padding:20px">बैंक B</div>
+          <div class="card" style="text-align:center;padding:20px">बिलिंग पार्टनर</div>
+          <div class="card" style="text-align:center;padding:20px">गेटवे</div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section">
+        <h2>प्लान और कमिशन</h2>
+        <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+          <div class="card" style="flex:1;min-width:220px">
+            <h4>स्टार्ट</h4>
+            <p style="font-weight:800;font-size:20px">₹0/महीना</p>
+            <p style="color:var(--muted)">बेसिक रिपोर्ट, रिचार्ज, बिल पे</p>
+            <div style="margin-top:10px"><a class="btn btn-primary" href="#signup">शुरू करें</a></div>
+          </div>
+          <div class="card" style="flex:1;min-width:220px">
+            <h4>बिज़नेस</h4>
+            <p style="font-weight:800;font-size:20px">₹999/महीना</p>
+            <p style="color:var(--muted)">API, विस्तृत रिपोर्ट, प्रायोरिटी सपोर्ट</p>
+            <div style="margin-top:10px"><a class="btn btn-primary" href="#signup">रजिस्टर करें</a></div>
+          </div>
+          <div class="card" style="flex:1;min-width:220px">
+            <h4>एंटरप्राइज़</h4>
+            <p style="font-weight:800;font-size:20px">कस्टम</p>
+            <p style="color:var(--muted)">कस्टम इंटीग्रेशन और SLA</p>
+            <div style="margin-top:10px"><a class="btn btn-primary" href="#contact">मंगवाएँ</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="signup" class="section">
+        <h2>रजिस्टर करें</h2>
+        <div class="card" style="margin-top:12px">
+          <form id="regForm" onsubmit="return register(event)">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div>
+                <label style="display:block">नाम / कंपनी</label>
+                <input id="rname" required />
+              </div>
+              <div>
+                <label style="display:block">मोबाइल</label>
+                <input id="rphone" required placeholder="10-digit" />
+              </div>
+            </div>
+            <div style="margin-top:12px">
+              <label style="display:block">ईमेल</label>
+              <input id="remail" />
+            </div>
+            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+              <button class="btn btn-primary" type="submit">रजिस्टर करें</button>
+              <div style="color:var(--muted)">हम आपकी जानकारी सुरक्षित रखते हैं।</div>
+            </div>
+            <div id="rmsg" style="margin-top:10px;color:green;display:none">रिकॉर्ड जमा किया गया — हम संपर्क करेंगे।</div>
+          </form>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>संपर्क</h2>
+        <div class="card" style="margin-top:12px">
+          <strong>कंपनी:</strong> JODHANA ENTERPRISES<br />
+          <strong>ईमेल:</strong> cmsjodhpur.com@gmail.com<br />
+          <strong>फोन:</strong> 8058055174<br />
+          <div style="margin-top:8px;color:var(--muted)">पता: आपकी कंपनी का पता यहाँ लिखें</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> JODHANA ENTERPRISES • सभी अधिकार सुरक्षित
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function quickSend(e){
+      e.preventDefault();
+      const to = document.getElementById('to').value.trim();
+      const amount = document.getElementById('amount').value.trim();
+      if(!to || !amount){alert('कृपया नंबर और राशि भरें');return false}
+      document.getElementById('qmsg').style.display='block';
+      setTimeout(()=>{document.getElementById('qmsg').style.display='none';document.getElementById('quickTx').reset()},1500);
+      return false;
+    }
+
+    function register(e){
+      e.preventDefault();
+      const name = document.getElementById('rname').value.trim();
+      const phone = document.getElementById('rphone').value.trim();
+      if(!name || !/^\d{10}$/.test(phone)){alert('सही नाम और 10-digit मोबाइल भरें');return false}
+      document.getElementById('rmsg').style.display='block';
+      setTimeout(()=>{document.getElementById('rmsg').style.display='none';document.getElementById('regForm').reset()},1600);
+      return false;
+    }
+  </script>
+</body>
+</html>
